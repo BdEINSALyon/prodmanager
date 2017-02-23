@@ -25,7 +25,7 @@ SECRET_KEY = '#br1ii4ij3fz3s+^ip$#m7eqjixlfgsqi*fm^*5&reae(!4dg8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['prodmanager.bde-insa-lyon.fr', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'manager.apps.ManagerConfig',
+    'account.apps.AccountConfig',
+    'permissions.apps.PermissionsConfig'
 ]
 
 MIDDLEWARE = [
@@ -50,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'proman.urls'
+ROOT_URLCONF = 'prodmanager.urls'
 
 TEMPLATES = [
     {
@@ -120,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]

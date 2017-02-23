@@ -1,11 +1,11 @@
-# ProMan - Production Manager
+# ProdManager - Production Manager
 This app manage a production server based on Docker.
 
 ## Deployment
 You can deploy this app by using Docker
 
 ## Project structure
-The python package `proman` contains the base application to launch. Main of the app logic remains into the `manager`
+The python package `prodmanager` contains the base application to launch. Main of the app logic remains into the `manager`
 application.
 
 ## CLI
@@ -15,8 +15,9 @@ This project has a CLI available with cli.pm
 [![GNU GPL v3.0](http://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl.html)
 
 ```
-ProMan - Production Manager
+ProdManager - Production Manager
 Copyright (C) 2017 Philippe VIENNE
+Copyright (C) 2017 Gabriel AUGENDRE
 Copyright (C) 2017 BdE INSA Lyon
 
 This program is free software: you can redistribute it and/or modify

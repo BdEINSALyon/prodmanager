@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'proman.wsgi.application'
+WSGI_APPLICATION = 'prodmanager.wsgi.application'
 
 
 # Database

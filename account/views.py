@@ -4,10 +4,12 @@ from django import shortcuts
 
 
 # Create your views here.
+from django.conf import settings
 from django.contrib.auth import backends
 from django.contrib.auth import login
 from django.urls import reverse
 from django.views import View
+from django.views.generic import TemplateView
 
 from account import models
 
@@ -43,3 +45,13 @@ class OAuthCallback(View):
         if user is not None:
             login(request, user)
         return shortcuts.redirect('/')
+
+
+class HomeLoginView(TemplateView):
+    template_name = 'account/login.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated():
+            return shortcuts.redirect(settings.LOGIN_REDIRECT_URL or 'logged_home')
+        else:
+            return super(HomeLoginView).get(request, args, kwargs)

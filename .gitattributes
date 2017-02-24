@@ -1,1 +1,3 @@
 static/lib/** linguist-vendored
+static/sass/*.css linguist-vendored
+static/sass/*.css.map linguist-vendored

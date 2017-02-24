@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,12 +9,12 @@
     {% endblock %}
     <link rel="stylesheet" href="{% static 'lib/css/bootstrap.min.css' %}" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'lib/css/font-awesome.css' %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'sass/style.css' %}" crossorigin="anonymous">
     {% block style_head %}
     {% endblock %}
     <script src="{% static 'lib/js/jquery-3.1.1.js' %}"></script>
     <script src="{% static 'lib/js/tether.js' %}"></script>
     <script src="{% static 'lib/js/bootstrap.js' %}"></script>
-    <script src="{% static 'css/style.css' %}"></script>
     {% block javascript_head %}
     {% endblock %}
 </head>

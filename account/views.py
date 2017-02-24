@@ -7,6 +7,8 @@ from django import shortcuts
 from django.conf import settings
 from django.contrib.auth import backends
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView
@@ -54,4 +56,9 @@ class HomeLoginView(TemplateView):
         if request.user.is_authenticated():
             return shortcuts.redirect(settings.LOGIN_REDIRECT_URL or 'logged_home')
         else:
-            return super(HomeLoginView).get(request, args, kwargs)
+            return super(HomeLoginView, self).get(request, args, kwargs)
+
+
+class LoggedHomeView(LoginRequiredMixin, TemplateView):
+    login_url = 'home'
+    template_name = 'account/logged.html'

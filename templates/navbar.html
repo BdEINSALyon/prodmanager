@@ -32,10 +32,8 @@
         {% block navbar_rightmodule %}
             <ul class="navbar-nav">
                 <li class="nav-item navbar-text">
-                    {{ user.email }}
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-danger" href="{% url 'logout' %}"><i class="fa fa-sign-out"></i></a>
+                    <span>{{ user.email }}</span>
+                    <a class="text-danger ml-2" href="{% url 'logout' %}" aria-label="Déconnexion"><i class="fa fa-sign-out"></i></a>
                 </li>
             </ul>
         {% endblock %}
